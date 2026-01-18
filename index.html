@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Todo Liste</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #764ba2;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 15px;
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        li:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        li.done {
+            opacity: 0.6;
+        }
+
+        li.done span {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .delete-btn {
+            background: #ff6b6b;
+            padding: 5px 10px;
+            font-size: 14px;
+            border-radius: 3px;
+        }
+
+        .delete-btn:hover {
+            background: #ff5252;
+        }
+
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .empty-message {
+            text-align: center;
+            color: #999;
+            padding: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Meine Todos</h1>
+        
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Neue Aufgabe eingeben...">
+            <button onclick="addTodo()">Hinzufügen</button>
+        </div>
+
+        <ul id="todoList"></ul>
+        <div id="emptyMessage" class="empty-message">Keine Aufgaben - super! 🎉</div>
+    </div>
+
+    <script>
+        const todoInput = document.getElementById('todoInput');
+        const todoList = document.getElementById('todoList');
+        const emptyMessage = document.getElementById('emptyMessage');
+
+        function addTodo() {
+            const text = todoInput.value.trim();
+            if (!text) return;
+
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <div style="display: flex; align-items: center; flex: 1;">
+                    <input type="checkbox" class="checkbox" onchange="toggleTodo(this)">
+                    <span>${text}</span>
+                </div>
+                <button class="delete-btn" onclick="deleteTodo(this)">Löschen</button>
+            `;
+
+            todoList.appendChild(li);
+            todoInput.value = '';
+            updateEmptyMessage();
+            todoInput.focus();
+        }
+
+        function toggleTodo(checkbox) {
+            checkbox.closest('li').classList.toggle('done');
+        }
+
+        function deleteTodo(btn) {
+            btn.closest('li').remove();
+            updateEmptyMessage();
+        }
+
+        function updateEmptyMessage() {
+            emptyMessage.style.display = todoList.children.length === 0 ? 'block' : 'none';
+        }
+
+        // Enter-Taste zum Hinzufügen
+        todoInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') addTodo();
+        });
+
+        // Initial state
+        updateEmptyMessage();
+    </script>
+</body>
+</html>

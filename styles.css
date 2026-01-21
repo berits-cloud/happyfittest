@@ -31,7 +31,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    border-bottom: 1px solid rgba(200, 178, 115, 0.2);
+    border-bottom: 1px solid rgba(240, 109, 0, 0.2);
 }
 
 .logo {
@@ -258,7 +258,7 @@ body {
 
 .feature-card {
     background: var(--dark);
-    border: 1px solid rgba(200, 178, 115, 0.2);
+    border: 1px solid rgba(240, 109, 0, 0.2);
     overflow: hidden;
     transition: all 0.3s;
     position: relative;
@@ -314,7 +314,7 @@ body {
 .location-card {
     background: var(--darker);
     padding: 30px;
-    border: 1px solid rgba(200, 178, 115, 0.1);
+    border: 1px solid rgba(240, 109, 0, 0.1);
     transition: all 0.3s;
     text-decoration: none;
     display: block;
@@ -414,7 +414,7 @@ body {
 
 .pricing-features li {
     padding: 10px 0;
-    border-bottom: 1px solid rgba(200, 178, 115, 0.1);
+    border-bottom: 1px solid rgba(240, 109, 0, 0.1);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -452,7 +452,7 @@ body {
 
 .contact-details li {
     padding: 15px 0;
-    border-bottom: 1px solid rgba(200, 178, 115, 0.1);
+    border-bottom: 1px solid rgba(240, 109, 0, 0.1);
     color: var(--text-gray);
 }
 
@@ -467,7 +467,7 @@ body {
     width: 100%;
     padding: 15px;
     background: var(--dark);
-    border: 1px solid rgba(200, 178, 115, 0.2);
+    border: 1px solid rgba(240, 109, 0, 0.2);
     color: var(--text-light);
     font-family: inherit;
     margin-bottom: 20px;
@@ -494,7 +494,7 @@ body {
     width: 100%;
     padding: 15px;
     background: var(--dark);
-    border: 1px solid rgba(200, 178, 115, 0.2);
+    border: 1px solid rgba(240, 109, 0, 0.2);
     color: #9ca3af;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -528,7 +528,7 @@ body {
 .footer {
     background: var(--dark);
     padding: 20px 40px;
-    border-top: 1px solid rgba(200, 178, 115, 0.2);
+    border-top: 1px solid rgba(240, 109, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -655,7 +655,7 @@ body {
         padding: 15px 25px;
         gap: 12px;
         text-align: right;
-        border: 1px solid rgba(200, 178, 115, 0.2);
+        border: 1px solid rgba(240, 109, 0, 0.2);
     }
 
     .nav-links a {

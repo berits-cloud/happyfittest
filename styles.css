@@ -668,9 +668,9 @@ body {
 
     .mobile-menu-btn {
         display: block;
-        font-size: 28px;
-        min-width: 48px;
-        min-height: 48px;
+        font-size: 34px;
+        min-width: 52px;
+        min-height: 52px;
     }
 
     .hero {

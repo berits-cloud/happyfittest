@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standorte - HappyFit</title>
+    <meta name="description" content="HappyFit Standorte in Deutschland. Finde dein Studio in deiner Nähe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="Logo_Orange_PNG.png" alt="HappyFit"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ausstattung.html">Ausstattung</a></li>
+            <li><a href="standorte.html" class="active">Standorte</a></li>
+            <li><a href="preise.html">Preise</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <span style="color: var(--gold); font-weight: 600; font-size: 14px;">DE</span>
+        <a href="preise.html" class="cta-button">Jetzt anmelden</a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>Unsere <span>Standorte</span></h1>
+    </section>
+
+    <!-- Deutschland -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <h2>Immer in <span>deiner Nähe</span></h2>
+            <p>Trainiere an 5 Standorten im Saarland</p>
+        </div>
+        <div class="locations-grid">
+            <a href="standort-bous.html" class="location-card">
+                <h3>HappyFit Bous</h3>
+                <p>Saarbrücker Str. 179<br>66359 Bous</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+            <a href="standort-merzig.html" class="location-card">
+                <h3>HappyFit Merzig</h3>
+                <p>Zum Wiesenhof 56<br>66663 Merzig</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+            <a href="standort-dillingen.html" class="location-card">
+                <h3>HappyFit Dillingen</h3>
+                <p>Siemensstraße 8<br>66763 Dillingen/Saar</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+            <a href="standort-perl-besch.html" class="location-card">
+                <h3>HappyFit Perl-Besch</h3>
+                <p>Moselaue 2<br>66706 Perl</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+            <a href="standort-losheim.html" class="location-card">
+                <h3>HappyFit Losheim am See</h3>
+                <p>Trierer Str. 31<br>66679 Losheim am See</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-light" style="text-align: center;">
+        <h2 style="font-size: 36px; margin-bottom: 20px;">Eine Mitgliedschaft - Alle Studios</h2>
+        <p style="color: var(--text-gray); margin-bottom: 30px;">Mit deiner HappyFit Mitgliedschaft hast du Zugang zu allen 5 Studios in Deutschland.</p>
+        <a href="preise.html" class="cta-button">Jetzt Mitglied werden</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">AGB</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

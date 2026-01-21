@@ -3,478 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HappyFit - Wir machen dich fit</title>
+    <title>Home</title>
+    <meta name="description" content="HappyFit - Premium Fitnessstudios in Oberösterreich, Niederösterreich und Wien. Mitgliedschaft ab €10.99 pro Woche.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --orange: #E87722;
-            --orange-dark: #d46a1c;
-            --white: #ffffff;
-            --black: #1a1a1a;
-            --gray-light: #f5f5f5;
-            --gray: #666666;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--black);
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem 2rem;
-            background: var(--white);
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--black);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.3rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--orange);
-        }
-
-        .nav-icon {
-            font-size: 1.2rem;
-        }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: var(--orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1rem;
-            text-align: center;
-            line-height: 1.1;
-            margin: 0 1.5rem;
-            border: 3px solid var(--orange-dark);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(135deg, rgba(232, 119, 34, 0.85) 0%, rgba(0,0,0,0.7) 100%),
-                        url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 8rem 2rem 4rem;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 900px;
-        }
-
-        .hero h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(3rem, 8vw, 6rem);
-            line-height: 1;
-            margin-bottom: 1.5rem;
-            text-transform: uppercase;
-        }
-
-        .hero h1 .highlight {
-            color: black;
-        }
-
-        .hero h1 .white {
-            color: var(--white);
-        }
-
-        .hero-subtitle {
-            color: var(--white);
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            border: 2px solid var(--white);
-            color: var(--white);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            background: transparent;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .btn-orange {
-            background: var(--orange);
-            border-color: var(--orange);
-        }
-
-        .btn-orange:hover {
-            background: var(--orange-dark);
-            border-color: var(--orange-dark);
-            color: var(--white);
-        }
-
-        /* Info Cards */
-        .info-cards {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .info-card {
-            background: var(--white);
-            padding: 2rem 3rem;
-            text-align: center;
-            min-width: 220px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-        }
-
-        .info-card.dark {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .info-card-title {
-            font-size: 0.9rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .info-card .price {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 4rem;
-            line-height: 1;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .info-card .price .currency {
-            font-size: 1.5rem;
-            margin-right: 0.3rem;
-            margin-top: 0.5rem;
-        }
-
-        .info-card .price .cents {
-            font-size: 1.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .info-card .price-period {
-            font-size: 0.9rem;
-            color: var(--gray);
-            margin-bottom: 1.5rem;
-        }
-
-        .info-card.dark .price-period {
-            color: #aaa;
-        }
-
-        .info-card .big-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 5rem;
-            line-height: 1;
-        }
-
-        .info-card .big-number span {
-            font-size: 2rem;
-        }
-
-        .info-card .subtitle {
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
-            border-top: 2px solid var(--orange);
-            display: inline-block;
-        }
-
-        .card-btn {
-            display: block;
-            padding: 0.8rem 1.5rem;
-            margin-top: 1.5rem;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--orange);
-            color: var(--white);
-            background: var(--orange);
-        }
-
-        .card-btn:hover {
-            background: var(--orange-dark);
-            border-color: var(--orange-dark);
-        }
-
-        .card-btn.outline {
-            background: transparent;
-            color: var(--black);
-        }
-
-        .card-btn.outline:hover {
-            background: var(--orange);
-            color: var(--white);
-        }
-
-        /* Lifestyle Section */
-        .lifestyle {
-            padding: 5rem 2rem;
-            text-align: center;
-            background: var(--white);
-        }
-
-        .lifestyle h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-
-        .lifestyle .subtitle {
-            color: var(--gray);
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-        }
-
-        .video-container {
-            max-width: 900px;
-            margin: 0 auto 3rem;
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-        }
-
-        .video-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background: var(--orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: none;
-        }
-
-        .play-button:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-            background: var(--orange-dark);
-        }
-
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            border-left: 25px solid var(--white);
-            margin-left: 5px;
-        }
-
-        /* Features Section */
-        .features {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .features-text {
-            text-align: left;
-            color: var(--gray);
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-
-        .features-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--black);
-            color: var(--white);
-            text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        footer p {
-            color: #888;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links span {
-                display: none;
-            }
-
-            .logo {
-                width: 60px;
-                height: 60px;
-                font-size: 0.8rem;
-            }
-
-            .info-cards {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .info-card {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#"><span class="nav-icon">💰</span><span>Tarife</span></a></li>
-            <li><a href="#"><span class="nav-icon">📍</span><span>Unsere Studios</span></a></li>
-            <li><a href="#"><span class="nav-icon">➕</span><span>Leistungen</span></a></li>
+        <a href="index.html" class="logo"><img src="Logo_Orange_PNG.png" alt="HappyFit"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ausstattung.html">Ausstattung</a></li>
+            <li><a href="standorte.html">Standorte</a></li>
+            <li><a href="preise.html">Preise</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        <div class="logo">
-            HAPPY<br>FIT
-        </div>
-        <ul class="nav-links">
-            <li><a href="#"><span class="nav-icon">👥</span><span>Über Uns</span></a></li>
-            <li><a href="#"><span class="nav-icon">📰</span><span>Blog</span></a></li>
-            <li><a href="#"><span class="nav-icon">✂️</span><span>Anmelden</span></a></li>
-        </ul>
+        <span style="color: var(--gold); font-weight: 600; font-size: 14px;">DE</span>
+        <a href="preise.html" class="cta-button">Jetzt anmelden</a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>
-                <span class="highlight">Wir machen dich</span><br>
-                <span class="highlight">Fit</span> <span class="white">& Du darfst</span><br>
-                <span class="white">überall rein</span>
-            </h1>
-            <p class="hero-subtitle">Eine Membership, alle Clubs & alle Leistungen</p>
-            <a href="#" class="btn">Los geht's!</a>
-
-            <div class="info-cards">
-                <div class="info-card dark">
-                    <p class="info-card-title">Premium Fitness für</p>
-                    <div class="price">
-                        <span class="currency">€</span>
-                        <span>9</span>
-                        <span class="cents">,99</span>
-                    </div>
-                    <p class="price-period">pro Woche</p>
-                    <a href="#" class="card-btn">Zu den Tarifen</a>
-                </div>
-                <div class="info-card">
-                    <p class="info-card-title">Clubs</p>
-                    <div class="big-number">5<span>x</span></div>
-                    <p class="subtitle">5x Deutschland</p>
-                    <a href="#" class="card-btn outline">Zu den Clubs</a>
-                </div>
+            <h1>Dein <span>Premium</span> Fitness Erlebnis</h1>
+            <p class="hero-price">Mitgliedschaft ab <strong>€10.99</strong> pro Woche</p>
+            <div class="hero-buttons">
+                <a href="preise.html" class="cta-button">Mitglied werden</a>
+                <a href="ausstattung.html" class="btn-outline">Mehr erfahren</a>
             </div>
         </div>
     </section>
 
-    <!-- Lifestyle Section -->
-    <section class="lifestyle">
-        <h2>Mehr als ein Gym. Ein Lifestyle.</h2>
-        <p class="subtitle">Willkommen bei HappyFit – wo Fitness zum Erlebnis wird!</p>
-
-        <div class="video-container">
-            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&h=500&fit=crop" alt="HappyFit Gym Interior">
-            <button class="play-button" aria-label="Video abspielen"></button>
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number" data-target="35" data-suffix="+">0</div>
+            <div class="stat-label">Studios</div>
         </div>
+        <div class="stat-item">
+            <div class="stat-number"><span data-target="24">0</span>/<span data-target="7">0</span></div>
+            <div class="stat-label">Geöffnet</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="50" data-suffix="k">0</div>
+            <div class="stat-label">Mitglieder</div>
+        </div>
+    </section>
 
-        <div class="features">
-            <div class="features-text">
-                <p>
-                    Bei HappyFit bekommst du mehr als nur Training. Bei uns erwarten dich modernste Geräte von über zehn Weltmarken, Sauna & Wellness, Massageliegen, Getränkebar, Solarium, Functional Area, Outdoor-Training, Booty Builder Geräte, Ladiesbereich und vieles mehr – alles inklusive!
-                </p>
-                <p>
-                    Ob du gerade erst startest oder schon Vollgas gibst, bei HappyFit findest du alles, was dein Training einzigartig macht.
-                </p>
+    <!-- Features Preview -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <h2>Unsere <span>Ausstattung</span></h2>
+            <p>Premium Equipment für dein perfektes Training</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600" alt="Kraftbereich">
+                <div class="feature-content">
+                    <h3>Kraftbereich</h3>
+                    <p>Top-Equipment von Matrix, Gym80 und Technogym für effektives Krafttraining.</p>
+                </div>
             </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600" alt="Cardio Zone">
+                <div class="feature-content">
+                    <h3>Cardio Zone</h3>
+                    <p>Modernste Cardio-Geräte mit Entertainment-Systemen für ein abwechslungsreiches Training.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600" alt="Functional Training">
+                <div class="feature-content">
+                    <h3>Functional Training</h3>
+                    <p>Großzügige Functional-Bereiche mit freien Gewichten und modernen Trainingstools.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="ausstattung.html" class="btn-outline">Alle Features ansehen</a>
+        </div>
+    </section>
+
+    <!-- Standorte Preview -->
+    <section class="section section-light">
+        <div class="section-header">
+            <h2>Unsere <span>Standorte</span></h2>
+            <p>5 Studios in Deutschland – immer in deiner Nähe</p>
+        </div>
+        <div class="locations-grid">
+            <a href="standort-bous.html" class="location-card">
+                <h3>HappyFit Bous</h3>
+                <p>Saarbrücker Str. 179<br>66359 Bous</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+            <a href="standort-merzig.html" class="location-card">
+                <h3>HappyFit Merzig</h3>
+                <p>Zum Wiesenhof 56<br>66663 Merzig</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+            <a href="standort-dillingen.html" class="location-card">
+                <h3>HappyFit Dillingen</h3>
+                <p>Siemensstraße 8<br>66763 Dillingen/Saar</p>
+                <span class="location-badge">24/7 geöffnet</span>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="standorte.html" class="btn-outline">Alle Standorte ansehen</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 HappyFit. Alle Rechte vorbehalten.</p>
+    <footer class="footer">
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">AGB</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - HappyFit</title>
+    <meta name="description" content="Kontaktiere HappyFit - Wir freuen uns auf deine Nachricht.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="Logo_Orange_PNG.png" alt="HappyFit"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ausstattung.html">Ausstattung</a></li>
+            <li><a href="standorte.html">Standorte</a></li>
+            <li><a href="preise.html">Preise</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+        <span style="color: var(--gold); font-weight: 600; font-size: 14px;">DE</span>
+        <a href="preise.html" class="cta-button">Jetzt anmelden</a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>Kontakt <span>aufnehmen</span></h1>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <h2>Schreib <span>uns</span></h2>
+            <p>Wir freuen uns auf deine Nachricht</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>HappyFit</h3>
+                <p>Dein Partner für Fitness in Österreich. Besuche uns in einem unserer 35+ Studios oder kontaktiere uns für weitere Informationen.</p>
+                <ul class="contact-details">
+                    <li>
+                        <strong>Telefon</strong>
+                        +43 (0) 732 123 456
+                    </li>
+                    <li>
+                        <strong>E-Mail</strong>
+                        info@happyfit.eu
+                    </li>
+                    <li>
+                        <strong>Hauptsitz</strong>
+                        Linz, Oberösterreich
+                    </li>
+                    <li>
+                        <strong>Öffnungszeiten Kundenservice</strong>
+                        Mo-Fr: 08:00 - 20:00 Uhr<br>
+                        Sa: 09:00 - 17:00 Uhr
+                    </li>
+                </ul>
+            </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="E-Mail" required>
+                <input type="tel" placeholder="Telefon (optional)">
+                <select class="contact-select">
+                    <option value="">Betreff auswählen</option>
+                    <option value="mitgliedschaft">Mitgliedschaft</option>
+                    <option value="probetraining">Probetraining</option>
+                    <option value="kurse">Kurse</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="sonstiges">Sonstiges</option>
+                </select>
+                <textarea placeholder="Deine Nachricht" required></textarea>
+                <button type="submit" class="cta-button" style="width: 100%;">Nachricht senden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section section-light">
+        <div class="section-header">
+            <h2>Unser <span>Hauptsitz</span></h2>
+            <p>Besuche uns in Linz</p>
+        </div>
+        <div style="max-width: 1200px; margin: 0 auto; background: var(--darker); height: 400px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(200, 178, 115, 0.2);">
+            <div style="text-align: center; color: var(--text-gray);">
+                <p style="font-size: 48px; margin-bottom: 20px;">📍</p>
+                <p>HappyFit Hauptsitz</p>
+                <p>Linz, Oberösterreich</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="section section-dark" style="text-align: center;">
+        <div class="section-header">
+            <h2>Folge <span>uns</span></h2>
+            <p>Bleib auf dem Laufenden</p>
+        </div>
+        <div class="footer-social" style="justify-content: center;">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">AGB</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Vielen Dank für deine Nachricht! Wir melden uns bald bei dir.');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>

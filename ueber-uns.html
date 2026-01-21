@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - HappyFit</title>
+    <meta name="description" content="Erfahre mehr über HappyFit - Dein Fitnesspartner in Deutschland.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="logo"><img src="Logo_Orange_PNG.png" alt="HappyFit"></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ausstattung.html">Ausstattung</a></li>
+            <li><a href="standorte.html">Standorte</a></li>
+            <li><a href="preise.html">Preise</a></li>
+            <li><a href="ueber-uns.html" class="active">Über uns</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <span style="color: var(--gold); font-weight: 600; font-size: 14px;">DE</span>
+        <a href="preise.html" class="cta-button">Jetzt anmelden</a>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1>Über <span>uns</span></h1>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <h2>Die Decker <span>Story</span></h2>
+            <p>Von Österreich nach Deutschland</p>
+        </div>
+
+        <!-- Desktop Timeline -->
+        <div class="timeline-desktop">
+            <!-- Timeline Line -->
+            <div style="position: absolute; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background: var(--gold);"></div>
+
+            <!-- 2024 -->
+            <div style="display: flex; align-items: center; margin-bottom: 50px;">
+                <div style="flex: 1; text-align: right; padding-right: 40px;">
+                    <h3 style="color: var(--gold); margin-bottom: 5px;">Heute</h3>
+                    <p style="color: var(--text-gray); font-size: 14px;">5 Studios in Deutschland unter der Leitung von Mike Decker, 30 Studios in Österreich unter der Leitung von Sven Decker.</p>
+                </div>
+                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; flex-shrink: 0;">
+                    <span style="color: var(--dark); font-weight: 700;">2024</span>
+                </div>
+                <div style="flex: 1; padding-left: 40px;"></div>
+            </div>
+
+            <!-- 2020 -->
+            <div style="display: flex; align-items: center; margin-bottom: 50px;">
+                <div style="flex: 1; padding-right: 40px;"></div>
+                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; flex-shrink: 0;">
+                    <span style="color: var(--dark); font-weight: 700;">2020</span>
+                </div>
+                <div style="flex: 1; text-align: left; padding-left: 40px;">
+                    <h3 style="color: var(--gold); margin-bottom: 5px;">Start in Deutschland</h3>
+                    <p style="color: var(--text-gray); font-size: 14px;">HappyFit expandiert nach Deutschland – das erste Studio öffnet seine Türen.</p>
+                </div>
+            </div>
+
+            <!-- 2015 -->
+            <div style="display: flex; align-items: center; margin-bottom: 50px;">
+                <div style="flex: 1; text-align: right; padding-right: 40px;">
+                    <h3 style="color: var(--gold); margin-bottom: 5px;">Erstes Studio</h3>
+                    <p style="color: var(--text-gray); font-size: 14px;">Eröffnung des ersten HappyFit Studios in Österreich.</p>
+                </div>
+                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; flex-shrink: 0;">
+                    <span style="color: var(--dark); font-weight: 700;">2015</span>
+                </div>
+                <div style="flex: 1; padding-left: 40px;"></div>
+            </div>
+
+            <!-- 2014 -->
+            <div style="display: flex; align-items: center;">
+                <div style="flex: 1; padding-right: 40px;"></div>
+                <div style="width: 60px; height: 60px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; flex-shrink: 0;">
+                    <span style="color: var(--dark); font-weight: 700;">2014</span>
+                </div>
+                <div style="flex: 1; text-align: left; padding-left: 40px;">
+                    <h3 style="color: var(--gold); margin-bottom: 5px;">Die Gründung</h3>
+                    <p style="color: var(--text-gray); font-size: 14px;">Sven Decker gründet HappyFit mit einer Vision: Fitness für jeden erschwinglich machen.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Timeline -->
+        <div class="timeline-mobile">
+            <div class="timeline-card">
+                <span class="timeline-year">2024</span>
+                <h3>Heute</h3>
+                <p>5 Studios in Deutschland unter der Leitung von Mike Decker, 30 Studios in Österreich unter der Leitung von Sven Decker.</p>
+            </div>
+            <div class="timeline-card">
+                <span class="timeline-year">2020</span>
+                <h3>Start in Deutschland</h3>
+                <p>HappyFit expandiert nach Deutschland – das erste Studio öffnet seine Türen.</p>
+            </div>
+            <div class="timeline-card">
+                <span class="timeline-year">2015</span>
+                <h3>Erstes Studio</h3>
+                <p>Eröffnung des ersten HappyFit Studios in Österreich.</p>
+            </div>
+            <div class="timeline-card">
+                <span class="timeline-year">2014</span>
+                <h3>Die Gründung</h3>
+                <p>Sven Decker gründet HappyFit mit einer Vision: Fitness für jeden erschwinglich machen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section section-light">
+        <div class="section-header">
+            <h2>Das sind <span>wir</span></h2>
+            <p>Fitness ist Familiensache</p>
+        </div>
+        <div class="about-founders-grid">
+            <div class="about-founders-image">
+                <i class="fas fa-users" style="font-size: 80px; color: var(--text-gray);"></i>
+            </div>
+            <div class="about-founders-text">
+                <h3>Die Brüder Decker</h3>
+                <p>Was als Idee in Österreich begann, ist jetzt auch in Deutschland angekommen – mit 5 Studios und auf Wachstumskurs.</p>
+                <p>Mit Leidenschaft für Fitness und dem Wunsch, Menschen zu einem gesünderen Leben zu verhelfen, haben wir HappyFit gegründet.</p>
+                <p>Unser Ziel: Ein Fitnessstudio, in dem sich jeder wohlfühlt – egal ob Anfänger oder Profi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Deutschland Section -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <h2>Unser Team <span>Deutschland</span></h2>
+            <p>Die Menschen hinter deinem Training</p>
+        </div>
+        <div class="team-deutschland-grid" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+            <div style="text-align: center;">
+                <div class="team-member" style="width: 150px; height: 150px; background: var(--dark); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-user" style="font-size: 50px; color: var(--text-gray);"></i>
+                </div>
+                <h3 style="color: var(--gold); margin-bottom: 5px; font-size: 16px;">Name</h3>
+                <p style="color: var(--text-gray); font-size: 12px;">Position</p>
+            </div>
+            <div style="text-align: center;">
+                <div class="team-member" style="width: 150px; height: 150px; background: var(--dark); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-user" style="font-size: 50px; color: var(--text-gray);"></i>
+                </div>
+                <h3 style="color: var(--gold); margin-bottom: 5px; font-size: 16px;">Name</h3>
+                <p style="color: var(--text-gray); font-size: 12px;">Position</p>
+            </div>
+            <div style="text-align: center;">
+                <div class="team-member" style="width: 150px; height: 150px; background: var(--dark); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-user" style="font-size: 50px; color: var(--text-gray);"></i>
+                </div>
+                <h3 style="color: var(--gold); margin-bottom: 5px; font-size: 16px;">Name</h3>
+                <p style="color: var(--text-gray); font-size: 12px;">Position</p>
+            </div>
+            <div style="text-align: center;">
+                <div class="team-member" style="width: 150px; height: 150px; background: var(--dark); border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                    <i class="fas fa-user" style="font-size: 50px; color: var(--text-gray);"></i>
+                </div>
+                <h3 style="color: var(--gold); margin-bottom: 5px; font-size: 16px;">Name</h3>
+                <p style="color: var(--text-gray); font-size: 12px;">Position</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section section-light">
+        <div class="section-header">
+            <h2>Unsere <span>Mission</span></h2>
+            <p>Fitness für jeden zugänglich machen</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Wer wir sind</h3>
+                <p>HappyFit wurde mit einer klaren Vision gegründet: Fitness für jeden zugänglich und erschwinglich zu machen. Wir glauben, dass jeder Mensch das Recht auf einen gesunden Lebensstil hat – unabhängig von Budget oder Erfahrung.</p>
+                <p style="margin-top: 20px;">Mit 5 Studios in Deutschland sind wir auf dem besten Weg, auch hier einer der beliebtesten Fitnessanbieter zu werden. Unser Erfolgsgeheimnis? Wir kombinieren hochwertige Ausstattung mit fairen Preisen und einer einladenden Atmosphäre.</p>
+            </div>
+            <div class="contact-info">
+                <h3>Was uns antreibt</h3>
+                <ul class="contact-details">
+                    <li>
+                        <strong>Qualität</strong>
+                        Modernste Geräte und saubere Studios
+                    </li>
+                    <li>
+                        <strong>Fairness</strong>
+                        Transparente Preise ohne versteckte Kosten
+                    </li>
+                    <li>
+                        <strong>Gemeinschaft</strong>
+                        Ein Ort, an dem sich jeder willkommen fühlt
+                    </li>
+                    <li>
+                        <strong>Flexibilität</strong>
+                        24/7 Zugang in allen Studios
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-dark" style="text-align: center;">
+        <div class="section-header">
+            <h2>Werde Teil der <span>Familie</span></h2>
+            <p>Starte noch heute deine Fitnessreise</p>
+        </div>
+        <div class="hero-buttons">
+            <a href="preise.html" class="cta-button">Jetzt anmelden</a>
+            <a href="kontakt.html" class="btn-outline">Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <ul class="footer-links">
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+                <li><a href="#">AGB</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

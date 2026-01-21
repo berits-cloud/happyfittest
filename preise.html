@@ -222,6 +222,8 @@
             text-align: center;
             border: 1px solid rgba(200, 178, 115, 0.2);
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
         }
 
         .pricing-card-small:hover {
@@ -251,6 +253,7 @@
         .pricing-card-small .pricing-features {
             margin: 20px 0;
             text-align: left;
+            flex: 1;
         }
 
         .pricing-card-small .pricing-features li {
@@ -265,8 +268,6 @@
 
             .pricing-card-small:last-child {
                 grid-column: span 2;
-                max-width: 400px;
-                margin: 0 auto;
             }
 
             .pricing-card-small.featured {
@@ -282,10 +283,10 @@
 
             .pricing-grid {
                 grid-template-columns: 1fr;
+                grid-auto-rows: 1fr;
             }
 
             .pricing-card-small {
-                min-height: 380px;
                 display: flex;
                 flex-direction: column;
             }

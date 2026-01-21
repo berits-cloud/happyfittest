@@ -10,7 +10,18 @@ document.addEventListener('DOMContentLoaded', function() {
         '.pricing-card-small',
         '.contact-info',
         '.contact-form',
-        '.hero-content'
+        '.hero-content',
+        '.hero-buttons',
+        '.timeline-desktop > div',
+        '.timeline-card',
+        '.about-founders-grid',
+        '.about-founders-image',
+        '.about-founders-text',
+        '.team-deutschland-grid > div',
+        '.footer-social',
+        '.contact-grid',
+        '.features-grid',
+        '.locations-grid'
     ];
 
     // Add fade-up class to elements

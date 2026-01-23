@@ -99,3 +99,45 @@ document.addEventListener('DOMContentLoaded', function() {
 function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('active');
 }
+
+// Carousel scroll function
+function scrollCarousel(dir) {
+    var el = document.getElementById('benefitsCarousel');
+    if (el) {
+        el.scrollLeft = el.scrollLeft + (dir * 300);
+    }
+}
+
+// Lightbox functions
+function openLightbox(src) {
+    var lightbox = document.getElementById('lightbox');
+    var img = document.getElementById('lightbox-img');
+    img.src = src;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    var lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Initialize carousel arrows
+document.addEventListener('DOMContentLoaded', function() {
+    var prevBtn = document.querySelector('.carousel-arrow.prev');
+    var nextBtn = document.querySelector('.carousel-arrow.next');
+    var carousel = document.getElementById('benefitsCarousel');
+
+    if (prevBtn && carousel) {
+        prevBtn.addEventListener('click', function() {
+            carousel.scrollLeft -= 300;
+        });
+    }
+
+    if (nextBtn && carousel) {
+        nextBtn.addEventListener('click', function() {
+            carousel.scrollLeft += 300;
+        });
+    }
+});

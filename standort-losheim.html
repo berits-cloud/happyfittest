@@ -86,7 +86,6 @@
                         losheim@happyfit.eu
                     </li>
                 </ul>
-                <a href="preise.html" class="cta-button" style="margin-top: 30px; display: inline-block;">Jetzt Mitglied werden</a>
             </div>
             <div style="height: 300px; border: 1px solid rgba(200, 178, 115, 0.2);">
                 <iframe
@@ -189,19 +188,17 @@
         <div class="section-header">
             <h2>Einblicke ins <span>Studio</span></h2>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto;">
-            <div style="height: 200px; background: var(--darker); border: 1px solid rgba(200, 178, 115, 0.2); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-image" style="font-size: 40px; color: var(--text-gray);"></i>
-            </div>
-            <div style="height: 200px; background: var(--darker); border: 1px solid rgba(200, 178, 115, 0.2); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-image" style="font-size: 40px; color: var(--text-gray);"></i>
-            </div>
-            <div style="height: 200px; background: var(--darker); border: 1px solid rgba(200, 178, 115, 0.2); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-image" style="font-size: 40px; color: var(--text-gray);"></i>
-            </div>
-            <div style="height: 200px; background: var(--darker); border: 1px solid rgba(200, 178, 115, 0.2); display: flex; align-items: center; justify-content: center;">
-                <i class="fas fa-image" style="font-size: 40px; color: var(--text-gray);"></i>
-            </div>
+        <div class="gallery-grid">
+            <img src="https://www.happyfit.eu/api/media/file/Losheim%201.jpg" alt="HappyFit Losheim Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
+            <img src="https://www.happyfit.eu/api/media/file/Losheim%202.jpg" alt="HappyFit Losheim Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
+            <img src="https://www.happyfit.eu/api/media/file/Losheim%203.jpg" alt="HappyFit Losheim Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
+            <img src="https://www.happyfit.eu/api/media/file/Losheim%204.jpg" alt="HappyFit Losheim Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center;" onclick="this.style.display='none';">
+            <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer;">&times;</span>
+            <img id="lightbox-img" src="" style="max-width: 90%; max-height: 90%; object-fit: contain;">
         </div>
     </section>
 
@@ -221,9 +218,10 @@
         </div>
         <div class="footer-right">
             <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                
+                <a href="https://www.instagram.com/happyfit_deutschland/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCuxN-v6VmEAswIhxIxXB3IA" target="_blank"><i class="fab fa-youtube"></i></a>
+                
             </div>
         </div>
     </footer>

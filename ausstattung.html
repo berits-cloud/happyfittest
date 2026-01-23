@@ -49,49 +49,60 @@
             <h2>Premium <span>Equipment</span></h2>
             <p>Nur das Beste für dein Training</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600" alt="Kraftbereich">
-                <div class="feature-content">
-                    <h3>Kraftbereich</h3>
-                    <p>Top-Equipment von Matrix, Gym80 und Technogym für effektives Krafttraining. Freie Gewichte bis 60kg und moderne Kraftstationen.</p>
+        <div class="carousel-container">
+            <button class="carousel-arrow prev" onclick="document.getElementById('ausstattungCarousel').scrollLeft -= 300"><i class="fas fa-chevron-left"></i></button>
+            <div class="features-grid swipeable" id="ausstattungCarousel">
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/Braunau%20HappyFit%20Club(3).jpg" alt="Kraftbereich">
+                    <div class="feature-content">
+                        <h3>Kraftbereich</h3>
+                        <p>Top-Equipment von Matrix, Gym80 und Technogym für effektives Krafttraining. Freie Gewichte bis 60kg und moderne Kraftstationen.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/Spinnging%20HappyFit.jpg" alt="Cardio Zone">
+                    <div class="feature-content">
+                        <h3>Cardio Zone</h3>
+                        <p>Modernste Cardio-Geräte mit Entertainment-Systemen. Laufbänder, Crosstrainer, Rudergeräte und Spinning-Bikes.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/Cross%20Training.png" alt="Functional Training" style="object-position: top;">
+                    <div class="feature-content">
+                        <h3>Functional Training</h3>
+                        <p>Großzügige Functional-Bereiche mit freien Gewichten, Kettlebells, Battle Ropes und modernen Trainingstools.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/booty%20builder.jpg" alt="Booty Corner" style="object-position: top;">
+                    <div class="feature-content">
+                        <h3>Booty Builder Corner</h3>
+                        <p>Gezieltes Po-Training mit den modernen Booty Builder Geräten. In ausgewählten Studios.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/Sauna%202.jpg" alt="Wellnessbereich">
+                    <div class="feature-content">
+                        <h3>Wellnessbereich</h3>
+                        <p>Finnische Sauna und Indoor Ruhebereich für tiefe Entspannung und optimale Muskelregeneration.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/LED_SOLARIUM.jpg" alt="Solarien">
+                    <div class="feature-content">
+                        <h3>Solarien</h3>
+                        <p>LED-, Standard- und Collagen-Solarien für gesundes Bräunen und straffe Haut. Ab 18 Jahren.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="https://www.happyfit.eu/api/media/file/Vibrafit%20HappyFit.png" alt="Vibrafit" style="object-position: top;">
+                    <div class="feature-content">
+                        <h3>Vibrafit</h3>
+                        <p>Effektives Ganzkörpertraining mit Vibrationstechnologie für Muskelaufbau und Straffung.</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600" alt="Cardio Zone">
-                <div class="feature-content">
-                    <h3>Cardio Zone</h3>
-                    <p>Modernste Cardio-Geräte mit Entertainment-Systemen. Laufbänder, Crosstrainer, Rudergeräte und Spinning-Bikes.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=600" alt="Functional Training">
-                <div class="feature-content">
-                    <h3>Functional Training</h3>
-                    <p>Großzügige Functional-Bereiche mit freien Gewichten, Kettlebells, Battle Ropes und modernen Trainingstools.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600" alt="Wellness">
-                <div class="feature-content">
-                    <h3>Wellness & Sauna</h3>
-                    <p>Finnische Saunas und Wellness-Bereiche zur perfekten Regeneration nach dem Training. Entspannung pur.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=600" alt="Solarium">
-                <div class="feature-content">
-                    <h3>LED Solarium</h3>
-                    <p>Hochmoderne LED-Solarien für eine gesunde Bräune das ganze Jahr über. Neueste Technologie für beste Ergebnisse.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?w=600" alt="Kurse">
-                <div class="feature-content">
-                    <h3>Gruppenkurse</h3>
-                    <p>Vielfältiges Kursangebot von Yoga bis HIIT in modern ausgestatteten Kursräumen mit professionellen Trainern.</p>
-                </div>
-            </div>
+            <button class="carousel-arrow next" onclick="document.getElementById('ausstattungCarousel').scrollLeft += 300"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
@@ -141,9 +152,10 @@
         </div>
         <div class="footer-right">
             <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                
+                <a href="https://www.instagram.com/happyfit_deutschland/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCuxN-v6VmEAswIhxIxXB3IA" target="_blank"><i class="fab fa-youtube"></i></a>
+                
             </div>
         </div>
     </footer>

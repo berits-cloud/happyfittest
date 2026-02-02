@@ -106,7 +106,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
-                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920') center/cover;
+                url('') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -166,7 +166,7 @@ body {
     height: 40vh;
     min-height: 300px;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920') center/cover;
+                url('') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -547,6 +547,10 @@ body {
     content: "✓";
     color: var(--gold);
     font-weight: 700;
+}
+
+.pricing-features.ermaessigt li::before {
+    color: #8BC34A;
 }
 
 /* Contact Section */

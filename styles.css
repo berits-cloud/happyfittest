@@ -116,6 +116,98 @@ body {
 
 .hero-content {
     max-width: 900px;
+    position: relative;
+}
+
+/* Action Badge */
+.action-badge {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: -180px;
+    top: -20px;
+    border-radius: 50%;
+    background: none;
+    padding: 0;
+    animation: badge-float 3s ease-in-out infinite;
+    cursor: pointer;
+    z-index: 10;
+    text-decoration: none;
+    transform: rotate(12deg);
+}
+
+.action-badge::before {
+    display: none;
+}
+
+.action-badge-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #e63946;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.action-badge-heart {
+    font-size: 16px;
+    color: #ffb3c1;
+    line-height: 1;
+    animation: heart-beat 1.2s ease-in-out infinite;
+}
+
+.action-badge-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ffb3c1;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.action-badge-discount {
+    font-size: 40px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.action-badge-discount small {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.action-badge-text {
+    font-size: 10px;
+    font-weight: 600;
+    color: #ffccd5;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@keyframes badge-float {
+    0%, 100% { transform: rotate(12deg) translateY(0); }
+    50% { transform: rotate(12deg) translateY(-8px); }
+}
+
+@keyframes badge-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes heart-beat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.25); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
 }
 
 .hero-badge {
@@ -811,6 +903,44 @@ body {
 
     .hero h1 {
         font-size: 32px;
+    }
+
+    .action-badge {
+        width: 150px;
+        height: 150px;
+        min-width: 150px;
+        max-width: 150px;
+        position: static;
+        display: block;
+        margin: 0 auto 15px auto;
+        transform: rotate(8deg);
+        right: auto;
+        top: auto;
+    }
+
+    .action-badge-heart {
+        font-size: 12px;
+    }
+
+    .action-badge-title {
+        font-size: 9px;
+    }
+
+    .action-badge-discount {
+        font-size: 28px;
+    }
+
+    .action-badge-discount small {
+        font-size: 16px;
+    }
+
+    .action-badge-text {
+        font-size: 8px;
+    }
+
+    @keyframes badge-float {
+        0%, 100% { transform: rotate(8deg) translateY(0); }
+        50% { transform: rotate(8deg) translateY(-5px); }
     }
 
     .hero-badge {

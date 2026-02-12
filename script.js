@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
         allCounters.forEach(counter => {
             const target = parseInt(counter.dataset.target);
             const suffix = counter.dataset.suffix || '';
-            const duration = 1500;
+            const duration = target <= 1 ? 400 : 1500;
             const steps = 60;
             const increment = target / steps;
             let current = 0;

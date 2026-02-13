@@ -597,6 +597,17 @@ body {
     color: var(--gold);
 }
 
+.faq-card,
+.faq-card:hover {
+    transform: none !important;
+    border-color: rgba(240, 109, 0, 0.1) !important;
+    cursor: default !important;
+}
+
+.faq-card:hover h3 {
+    color: var(--text-light) !important;
+}
+
 .location-badge {
     display: inline-block;
     background: var(--gold);

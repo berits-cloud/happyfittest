@@ -246,17 +246,77 @@
             <h2>Einblicke ins <span>Studio</span></h2>
         </div>
         <div class="gallery-grid">
-            <img src="" alt="HappyFit Dillingen Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
-            <img src="" alt="HappyFit Dillingen Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
-            <img src="" alt="HappyFit Dillingen Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
-            <img src="" alt="HappyFit Dillingen Studio" class="gallery-img" onclick="if(window.innerWidth>768){document.getElementById('lightbox').style.display='flex'; document.getElementById('lightbox-img').src=this.src;}">
+            <img src="Dillingen/Dillingen01.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
+            <img src="Dillingen/Dillingen02.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
+            <img src="Dillingen/Dillingen03.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
+            <img src="Dillingen/Dillingen04.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
+            <img src="Dillingen/Dillingen05.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
+            <img src="Dillingen/Dillingen06.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
+            <img src="Dillingen/Dillingen07.webp" alt="HappyFit Dillingen Studio" class="gallery-img">
         </div>
 
         <!-- Lightbox -->
-        <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center;" onclick="this.style.display='none';">
-            <span style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer;">&times;</span>
+        <div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
+            <span id="lightbox-close" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; z-index: 10001;">&times;</span>
+            <button id="lightbox-prev" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 36px; cursor: pointer; z-index: 10001; padding: 15px;"><i class="fas fa-chevron-left"></i></button>
             <img id="lightbox-img" src="" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+            <button id="lightbox-next" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 36px; cursor: pointer; z-index: 10001; padding: 15px;"><i class="fas fa-chevron-right"></i></button>
         </div>
+        <script>
+        (function() {
+            var imgs = document.querySelectorAll('.gallery-grid .gallery-img');
+            var currentIdx = 0;
+            var lb = document.getElementById('lightbox');
+            var lbImg = document.getElementById('lightbox-img');
+
+            function showImage(idx) {
+                currentIdx = idx;
+                lbImg.setAttribute('src', imgs[currentIdx].getAttribute('src'));
+            }
+
+            imgs.forEach(function(img, idx) {
+                img.addEventListener('click', function() {
+                    showImage(idx);
+                    lb.style.display = 'flex';
+                });
+            });
+
+            document.getElementById('lightbox-close').addEventListener('click', function() {
+                lb.style.display = 'none';
+            });
+            document.getElementById('lightbox-prev').addEventListener('click', function(e) {
+                e.stopPropagation();
+                showImage((currentIdx - 1 + imgs.length) % imgs.length);
+            });
+            document.getElementById('lightbox-next').addEventListener('click', function(e) {
+                e.stopPropagation();
+                showImage((currentIdx + 1) % imgs.length);
+            });
+            lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
+
+            // Swipe
+            var startX = 0;
+            lb.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+            lb.addEventListener('touchend', function(e) {
+                var diff = e.changedTouches[0].clientX - startX;
+                if (diff < -50) showImage((currentIdx + 1) % imgs.length);
+                else if (diff > 50) showImage((currentIdx - 1 + imgs.length) % imgs.length);
+            });
+
+            // Keyboard
+            document.addEventListener('keydown', function(e) {
+                if (lb.style.display !== 'flex') return;
+                if (e.key === 'ArrowRight') showImage((currentIdx + 1) % imgs.length);
+                else if (e.key === 'ArrowLeft') showImage((currentIdx - 1 + imgs.length) % imgs.length);
+                else if (e.key === 'Escape') lb.style.display = 'none';
+            });
+
+            // Close on background
+            lb.addEventListener('click', function(e) {
+                if (e.target === lb) lb.style.display = 'none';
+            });
+        })();
+        </script>
     </section>
 
     <!-- Back to Locations -->

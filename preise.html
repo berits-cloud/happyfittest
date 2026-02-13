@@ -21,30 +21,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <a href="preise.html" class="announcement-link">
-            <div class="announcement-track">
-                <div class="announcement-content">
-                    <span>Valentinstagsaktion</span>
-                    <span class="announcement-dot">&bull;</span>
-                    <span>50% auf die Anmeldegebühr</span>
-                    <span class="announcement-dot">&bull;</span>
-                    <span>Nur für kurze Zeit</span>
-                    <span class="announcement-dot">&bull;</span>
-                </div>
-                <div class="announcement-content" aria-hidden="true">
-                    <span>Valentinstagsaktion</span>
-                    <span class="announcement-dot">&bull;</span>
-                    <span>50% auf die Anmeldegebühr</span>
-                    <span class="announcement-dot">&bull;</span>
-                    <span>Nur für kurze Zeit</span>
-                    <span class="announcement-dot">&bull;</span>
-                </div>
-            </div>
-        </a>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <a href="index.html" class="logo"><img src="Logo_Orange_PNG.png" alt="HappyFit"></a>
@@ -81,6 +57,7 @@
             <div class="aktion-banner-right">
                 <span class="aktion-banner-discount">-50%</span>
                 <span class="aktion-banner-detail">auf die Anmeldegebühr</span>
+                <span class="aktion-banner-limited">Nur für kurze Zeit</span>
             </div>
         </div>
         <div class="pricing-wrapper">
@@ -466,6 +443,16 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+        }
+
+        .aktion-banner-limited {
+            display: block;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gold);
+            margin-top: 6px;
         }
 
         @media (max-width: 768px) {

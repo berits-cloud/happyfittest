@@ -20,65 +20,10 @@ body {
     line-height: 1.6;
 }
 
-/* Announcement Bar */
-.announcement-bar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 36px;
-    background: var(--gold);
-    z-index: 1001;
-    overflow: hidden;
-}
-
-.announcement-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    text-decoration: none;
-}
-
-.announcement-track {
-    display: flex;
-    animation: marquee 20s linear infinite;
-    white-space: nowrap;
-}
-
-.announcement-track:hover {
-    animation-play-state: paused;
-}
-
-.announcement-content {
-    display: flex;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.announcement-content span {
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--dark);
-    padding: 0 20px;
-}
-
-.announcement-dot {
-    opacity: 0.35 !important;
-    font-size: 8px !important;
-    letter-spacing: 0 !important;
-    padding: 0 10px !important;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 36px;
+    top: 0;
     width: 100%;
     background: rgba(13, 13, 13, 0.95);
     padding: 15px 50px;
@@ -200,6 +145,9 @@ body {
 .hero-content {
     max-width: 900px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Glass Promo Card */
@@ -208,8 +156,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 6px;
-    padding: 20px 40px;
-    margin-bottom: 25px;
+    padding: 30px 50px;
+    margin-bottom: 35px;
     background: rgba(240, 109, 0, 0.08);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -221,12 +169,13 @@ body {
     cursor: pointer;
     transition: all 0.4s ease;
     animation: glass-glow 3s ease-in-out infinite;
+    transform: rotate(4deg);
 }
 
 .glass-promo:hover {
     border-color: rgba(240, 109, 0, 0.6);
     background: rgba(240, 109, 0, 0.12);
-    transform: translateY(-3px);
+    transform: rotate(4deg) translateY(-5px);
     box-shadow: 0 12px 40px rgba(240, 109, 0, 0.2);
 }
 
@@ -234,16 +183,16 @@ body {
     position: absolute;
     top: 0;
     left: -100%;
-    width: 60%;
+    width: 80%;
     height: 100%;
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(240, 109, 0, 0.08),
-        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.05),
         transparent
     );
-    animation: shimmer 4s ease-in-out infinite;
+    animation: badge-shimmer 5s ease-in-out infinite;
     pointer-events: none;
 }
 
@@ -269,6 +218,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: var(--text-gray);
+}
+
+.glass-promo-limited {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    margin-top: 4px;
 }
 
 @keyframes glass-glow {
@@ -335,7 +293,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 116px;
+    padding-top: 80px;
 }
 
 .page-hero h1 {
@@ -916,18 +874,7 @@ body {
 
 /* Responsive */
 @media (max-width: 968px) {
-    .announcement-bar {
-        height: 32px;
-    }
-
-    .announcement-content span {
-        font-size: 11px;
-        letter-spacing: 1.5px;
-        padding: 0 15px;
-    }
-
     .navbar {
-        top: 32px;
         padding: 10px 15px;
     }
 
@@ -990,7 +937,7 @@ body {
 
     .glass-promo {
         padding: 16px 28px;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
     }
 
     .glass-promo-tag {
@@ -1022,7 +969,7 @@ body {
     .page-hero {
         height: 30vh;
         min-height: 200px;
-        padding-top: 100px;
+        padding-top: 68px;
     }
 
     .page-hero h1 {

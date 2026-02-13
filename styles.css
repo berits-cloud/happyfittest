@@ -20,10 +20,65 @@ body {
     line-height: 1.6;
 }
 
+/* Announcement Bar */
+.announcement-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 36px;
+    background: var(--gold);
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.announcement-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.announcement-track {
+    display: flex;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+.announcement-track:hover {
+    animation-play-state: paused;
+}
+
+.announcement-content {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.announcement-content span {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dark);
+    padding: 0 20px;
+}
+
+.announcement-dot {
+    opacity: 0.35 !important;
+    font-size: 8px !important;
+    letter-spacing: 0 !important;
+    padding: 0 10px !important;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 36px;
     width: 100%;
     background: rgba(13, 13, 13, 0.95);
     padding: 15px 50px;
@@ -119,95 +174,84 @@ body {
     position: relative;
 }
 
-/* Action Badge */
-.action-badge {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    right: -180px;
-    top: -20px;
-    border-radius: 50%;
-    background: none;
-    padding: 0;
-    animation: badge-float 3s ease-in-out infinite;
-    cursor: pointer;
-    z-index: 10;
-    text-decoration: none;
-    transform: rotate(12deg);
-}
-
-.action-badge::before {
-    display: none;
-}
-
-.action-badge-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #e63946;
-    display: flex;
+/* Glass Promo Card */
+.glass-promo {
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    gap: 6px;
+    padding: 20px 40px;
+    margin-bottom: 25px;
+    background: rgba(240, 109, 0, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(240, 109, 0, 0.3);
+    border-radius: 0;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    animation: glass-glow 3s ease-in-out infinite;
 }
 
-.action-badge-heart {
-    font-size: 16px;
-    color: #ffb3c1;
-    line-height: 1;
-    animation: heart-beat 1.2s ease-in-out infinite;
+.glass-promo:hover {
+    border-color: rgba(240, 109, 0, 0.6);
+    background: rgba(240, 109, 0, 0.12);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(240, 109, 0, 0.2);
 }
 
-.action-badge-title {
+.glass-promo-shimmer {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(240, 109, 0, 0.08),
+        rgba(255, 255, 255, 0.06),
+        transparent
+    );
+    animation: shimmer 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.glass-promo-tag {
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #ffb3c1;
-    line-height: 1.1;
-    text-align: center;
+    letter-spacing: 3px;
+    color: var(--gold);
 }
 
-.action-badge-discount {
-    font-size: 40px;
+.glass-promo-discount {
+    font-size: 48px;
     font-weight: 900;
     color: #fff;
     line-height: 1;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 30px rgba(240, 109, 0, 0.4);
 }
 
-.action-badge-discount small {
-    font-size: 22px;
-    font-weight: 800;
-}
-
-.action-badge-text {
-    font-size: 10px;
+.glass-promo-detail {
+    font-size: 12px;
     font-weight: 600;
-    color: #ffccd5;
-    text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px;
+    color: var(--text-gray);
 }
 
-@keyframes badge-float {
-    0%, 100% { transform: rotate(12deg) translateY(0); }
-    50% { transform: rotate(12deg) translateY(-8px); }
+@keyframes glass-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(240, 109, 0, 0.1), inset 0 0 20px rgba(240, 109, 0, 0.03); }
+    50% { box-shadow: 0 0 30px rgba(240, 109, 0, 0.2), inset 0 0 30px rgba(240, 109, 0, 0.05); }
 }
 
-@keyframes badge-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes heart-beat {
-    0%, 100% { transform: scale(1); }
-    15% { transform: scale(1.25); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.15); }
-    60% { transform: scale(1); }
+@keyframes shimmer {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
 }
 
 .hero-badge {
@@ -263,7 +307,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 116px;
 }
 
 .page-hero h1 {
@@ -844,7 +888,18 @@ body {
 
 /* Responsive */
 @media (max-width: 968px) {
+    .announcement-bar {
+        height: 32px;
+    }
+
+    .announcement-content span {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        padding: 0 15px;
+    }
+
     .navbar {
+        top: 32px;
         padding: 10px 15px;
     }
 
@@ -875,7 +930,7 @@ body {
         align-items: center;
         gap: 30px;
         text-align: center;
-        z-index: 999;
+        z-index: 1002;
     }
 
     .nav-links a {
@@ -892,7 +947,7 @@ body {
         font-size: 34px;
         min-width: 52px;
         min-height: 52px;
-        z-index: 1000;
+        z-index: 1003;
         position: relative;
     }
 
@@ -905,42 +960,22 @@ body {
         font-size: 32px;
     }
 
-    .action-badge {
-        width: 150px;
-        height: 150px;
-        min-width: 150px;
-        max-width: 150px;
-        position: static;
-        display: block;
-        margin: 0 auto 15px auto;
-        transform: rotate(8deg);
-        right: auto;
-        top: auto;
+    .glass-promo {
+        padding: 16px 28px;
+        margin-bottom: 20px;
     }
 
-    .action-badge-heart {
-        font-size: 12px;
+    .glass-promo-tag {
+        font-size: 10px;
+        letter-spacing: 2px;
     }
 
-    .action-badge-title {
-        font-size: 9px;
+    .glass-promo-discount {
+        font-size: 36px;
     }
 
-    .action-badge-discount {
-        font-size: 28px;
-    }
-
-    .action-badge-discount small {
-        font-size: 16px;
-    }
-
-    .action-badge-text {
-        font-size: 8px;
-    }
-
-    @keyframes badge-float {
-        0%, 100% { transform: rotate(8deg) translateY(0); }
-        50% { transform: rotate(8deg) translateY(-5px); }
+    .glass-promo-detail {
+        font-size: 10px;
     }
 
     .hero-badge {
@@ -959,6 +994,7 @@ body {
     .page-hero {
         height: 30vh;
         min-height: 200px;
+        padding-top: 100px;
     }
 
     .page-hero h1 {

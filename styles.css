@@ -158,25 +158,25 @@ body {
     gap: 6px;
     padding: 30px 50px;
     margin-bottom: 35px;
-    background: rgba(240, 109, 0, 0.08);
+    background: rgba(76, 175, 80, 0.08);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(240, 109, 0, 0.3);
+    border: 1px solid rgba(76, 175, 80, 0.3);
     border-radius: 0;
     text-decoration: none;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
-    animation: glass-glow 3s ease-in-out infinite, glass-float 3s ease-in-out infinite;
+    animation: glass-glow 3s ease-in-out infinite, glass-float 6s ease-in-out infinite;
     transform: rotate(4deg);
 }
 
 .glass-promo:hover {
-    border-color: rgba(240, 109, 0, 0.6);
-    background: rgba(240, 109, 0, 0.12);
+    border-color: rgba(76, 175, 80, 0.6);
+    background: rgba(76, 175, 80, 0.12);
     transform: rotate(4deg) translateY(-8px);
-    box-shadow: 0 16px 40px rgba(240, 109, 0, 0.25);
+    box-shadow: 0 16px 40px rgba(76, 175, 80, 0.25);
     animation-play-state: paused;
 }
 
@@ -202,7 +202,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--gold);
+    color: #4CAF50;
 }
 
 .glass-promo-discount {
@@ -210,7 +210,7 @@ body {
     font-weight: 900;
     color: #fff;
     line-height: 1;
-    text-shadow: 0 0 30px rgba(240, 109, 0, 0.4);
+    text-shadow: 0 0 30px rgba(76, 175, 80, 0.4);
 }
 
 .glass-promo-detail {
@@ -226,13 +226,13 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--gold);
+    color: #4CAF50;
     margin-top: 4px;
 }
 
 @keyframes glass-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(240, 109, 0, 0.1), inset 0 0 20px rgba(240, 109, 0, 0.03); }
-    50% { box-shadow: 0 0 30px rgba(240, 109, 0, 0.2), inset 0 0 30px rgba(240, 109, 0, 0.05); }
+    0%, 100% { box-shadow: 0 0 20px rgba(76, 175, 80, 0.1), inset 0 0 20px rgba(76, 175, 80, 0.03); }
+    50% { box-shadow: 0 0 30px rgba(76, 175, 80, 0.2), inset 0 0 30px rgba(76, 175, 80, 0.05); }
 }
 
 @keyframes glass-float {

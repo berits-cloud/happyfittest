@@ -1002,6 +1002,7 @@ body {
     }
 
     .stats {
+        flex-direction: column;
         gap: 30px;
         padding: 30px 15px;
     }

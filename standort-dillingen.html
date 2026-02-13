@@ -42,6 +42,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <!-- Announcement Bar -->
@@ -103,7 +104,19 @@
                     </li>
                     <li>
                         <strong>Öffnungszeiten</strong>
-                        24 Stunden / 7 Tage die Woche
+                        24/7 – 365 Tage im Jahr
+                    </li>
+                    <li>
+                        <strong>Anmeldezeiten / Betreuung</strong>
+                        Mo–Fr: 9–14 Uhr &amp; 16–21 Uhr<br>
+                        So: 10–14 Uhr<br>
+                        <span style="font-size: 12px; color: var(--text-gray);">Urlaubs- und Krankheitszeit – Änderungen möglich</span>
+                    </li>
+                    <li>
+                        <strong>Saunaöffnungszeiten</strong>
+                        Mo/Mi/Fr: 10–12 Uhr<br>
+                        Mo–Fr: 16:30–21 Uhr<br>
+                        So: 11–14 Uhr
                     </li>
                     <li>
                         <strong>E-Mail</strong>
@@ -111,7 +124,7 @@
                     </li>
                 </ul>
             </div>
-            <div style="height: 300px; border: 1px solid rgba(200, 178, 115, 0.2);">
+            <div style="min-height: 100%; border: 1px solid rgba(200, 178, 115, 0.2);">
                 <iframe
                     src="https://maps.google.com/maps?q=Siemensstra%C3%9Fe+8,+66763+Dillingen&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     width="100%"
@@ -124,54 +137,98 @@
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="section section-light">
-        <div class="section-header">
-            <h2>Unsere <span>Ausstattung</span></h2>
+    <!-- Stats -->
+    <section class="stats section-light" style="flex-wrap: wrap; row-gap: 60px;">
+        <div class="section-header" style="width: 100%; margin-bottom: 0px;">
+            <h2>Dein Happy <span>Place</span></h2>
             <p>Das erwartet dich in Dillingen</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Kraftbereich</h3>
-                    <p>Moderne Geräte von Matrix, Gym80 und Technogym</p>
+        <div class="stat-item">
+            <div class="stat-number" data-target="1000">0</div>
+            <div class="stat-label">qm Studiofläche</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">qm Kurzhantelbereich</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="70">0</div>
+            <div class="stat-label">qm Ausdauer</div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section section-dark">
+        <div class="section-header">
+            <h2>Unsere <span>Ausstattung</span></h2>
+            <p>Alles für dein perfektes Training</p>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-arrow prev" onclick="document.getElementById('dillingenCarousel').scrollLeft -= 300"><i class="fas fa-chevron-left"></i></button>
+            <div class="features-grid swipeable" id="dillingenCarousel">
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-cup-straw" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>ELO</h3>
+                        <p>Elektrolytgetränke</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-lightning-charge" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>Vibrafit</h3>
+                        <p>Vibrationstraining</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-person-arms-up" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>Flex Area</h3>
+                        <p>Dehn- und Mobilisationsbereich</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-fire" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>Sauna</h3>
+                        <p>Gemischte Sauna + Outdoor-Relaxbereich</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-sun" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>2x Solarium</h3>
+                        <p>Sonnenbänke im Studio</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-tree" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>Outdoor- &amp; Calisthenicspark</h3>
+                        <p>Training an der frischen Luft</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-wifi" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>Gratis W-LAN</h3>
+                        <p>Kostenloses WLAN im gesamten Studio</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <i class="bi bi-p-circle" style="font-size: 48px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+                        <h3>Parkplatz</h3>
+                        <p>Kostenlose Parkplätze direkt am Studio</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Cardio Zone</h3>
-                    <p>Laufbänder, Crosstrainer und mehr</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Functional Area</h3>
-                    <p>Freie Gewichte und Functional Training</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Wellness</h3>
-                    <p>Sauna und Entspannungsbereich</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Gratis Parken</h3>
-                    <p>Kostenlose Parkplätze direkt am Studio</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>24/7 Zugang</h3>
-                    <p>Trainiere wann du willst</p>
-                </div>
-            </div>
+            <button class="carousel-arrow next" onclick="document.getElementById('dillingenCarousel').scrollLeft += 300"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section class="section section-dark">
+    <section class="section section-light">
         <div class="section-header">
             <h2>Unser Team <span>Dillingen</span></h2>
         </div>
@@ -208,7 +265,7 @@
     </section>
 
     <!-- Studio Galerie -->
-    <section class="section section-light">
+    <section class="section section-dark">
         <div class="section-header">
             <h2>Einblicke ins <span>Studio</span></h2>
         </div>
@@ -227,7 +284,7 @@
     </section>
 
     <!-- Back to Locations -->
-    <section class="section section-dark" style="text-align: center;">
+    <section class="section section-light" style="text-align: center;">
         <a href="standorte.html" class="btn-outline"><i class="fas fa-arrow-left"></i> Alle Standorte</a>
     </section>
 

@@ -125,8 +125,8 @@
 
                 <!-- Tarif 3 -->
                 <div class="pricing-card-small">
-                    <div class="pricing-badge">Happy Flex Aktion</div>
-                    <h2>Monatl. Kündbar*</h2>
+                    <div class="pricing-badge shimmer-badge">Happy Flex Aktion<span class="badge-shimmer"></span></div>
+                    <h2>Monatl. kündbar*</h2>
                     <div class="price">€12,99 <span>/Woche</span></div>
                     <p class="price-period">4 Wochen Mindestlaufzeit</p>
                     <ul class="pricing-features">
@@ -137,7 +137,7 @@
                         <li>Gratis WLAN</li>
                         <li>Gratis Trainingsplan</li>
                     </ul>
-                    <a href="kontakt.html" class="cta-button" style="display: inline-block; width: 100%;">Anmelden</a>
+                    <a href="kontakt.html" class="cta-button shimmer-badge" style="display: inline-block; width: 100%;">Anmelden<span class="badge-shimmer"></span></a>
                 </div>
             </div>
         </div>
@@ -190,8 +190,8 @@
 
                 <!-- Ermäßigt Tarif 3 -->
                 <div class="pricing-card-small">
-                    <div class="pricing-badge" style="background: #8BC34A;">Happy Flex Aktion</div>
-                    <h2>Monatl. Kündbar*</h2>
+                    <div class="pricing-badge shimmer-badge" style="background: #8BC34A;">Happy Flex Aktion<span class="badge-shimmer badge-shimmer-green"></span></div>
+                    <h2>Monatl. kündbar*</h2>
                     <div class="price" style="color: #8BC34A;">€10,99 <span>/Woche</span></div>
                     <p class="price-period">4 Wochen Mindestlaufzeit</p>
                     <ul class="pricing-features ermaessigt">
@@ -202,7 +202,7 @@
                         <li>Gratis WLAN</li>
                         <li>Gratis Trainingsplan</li>
                     </ul>
-                    <a href="kontakt.html" class="cta-button" style="display: inline-block; width: 100%; background: #8BC34A;">Anmelden</a>
+                    <a href="kontakt.html" class="cta-button shimmer-badge" style="display: inline-block; width: 100%; background: #8BC34A;">Anmelden<span class="badge-shimmer badge-shimmer-green"></span></a>
                 </div>
             </div>
         </div>
@@ -364,6 +364,44 @@
     </footer>
 
     <style>
+        .shimmer-badge {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-shimmer {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.5),
+                rgba(255, 255, 255, 0.35),
+                transparent
+            );
+            animation: badge-shimmer 5s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .badge-shimmer-green {
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.45),
+                rgba(255, 255, 255, 0.3),
+                transparent
+            );
+        }
+
+        @keyframes badge-shimmer {
+            0% { left: -100%; }
+            40% { left: 150%; }
+            100% { left: 150%; }
+        }
+
         .aktion-banner {
             max-width: 700px;
             margin: 0 auto 45px auto;
@@ -437,6 +475,8 @@
 
         @media (max-width: 768px) {
             .aktion-banner {
+                max-width: none;
+                width: 100%;
                 flex-direction: column;
                 text-align: center;
                 padding: 20px;
@@ -529,6 +569,7 @@
             .pricing-wrapper {
                 flex-direction: column;
                 gap: 20px;
+                align-items: stretch;
             }
 
             .pricing-grid {

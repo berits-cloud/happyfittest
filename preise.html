@@ -32,10 +32,7 @@
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <span style="color: var(--gold); font-weight: 600; font-size: 14px;">DE</span>
-            <a href="preise.html" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
-        </div>
+        <a href="preise.html" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
@@ -46,6 +43,7 @@
 
     <!-- Pricing Section -->
     <section class="section section-dark">
+        <!-- AKTION BANNER AUSGEBLENDET – zum Reaktivieren Kommentar entfernen
         <div class="aktion-banner">
             <div class="aktion-banner-left">
                 <span class="aktion-banner-icon">%</span>
@@ -60,6 +58,7 @@
                 <span class="aktion-banner-limited">Nur für kurze Zeit</span>
             </div>
         </div>
+        -->
         <div class="pricing-wrapper">
             <div class="pricing-grid">
                 <!-- Tarif 1 -->
@@ -82,7 +81,10 @@
                 <!-- Flex Tarif (Mitte) -->
                 <div class="pricing-card-small featured flex-highlight">
                     <div class="flex-ribbon">Am beliebtesten</div>
+                    <!-- AKTION BADGE AUSGEBLENDET
                     <div class="pricing-badge shimmer-badge">Happy Flex Aktion<span class="badge-shimmer"></span></div>
+                    -->
+                    <div class="pricing-badge">4 Wochen</div>
                     <h2>Monatl. kündbar*</h2>
                     <div class="price">€12,99 <span>/Woche</span></div>
                     <p class="price-period">4 Wochen Mindestlaufzeit</p>
@@ -148,7 +150,10 @@
                 <!-- Ermäßigt Flex Tarif (Mitte) -->
                 <div class="pricing-card-small flex-highlight" style="border: 2px solid #8BC34A; transform: scale(1.05);">
                     <div class="flex-ribbon" style="background: #8BC34A;">Am beliebtesten</div>
+                    <!-- AKTION BADGE AUSGEBLENDET
                     <div class="pricing-badge shimmer-badge" style="background: #8BC34A;">Happy Flex Aktion<span class="badge-shimmer badge-shimmer-green"></span></div>
+                    -->
+                    <div class="pricing-badge" style="background: #8BC34A;">4 Wochen</div>
                     <h2>Monatl. kündbar*</h2>
                     <div class="price" style="color: #8BC34A;">€10,99 <span>/Woche</span></div>
                     <p class="price-period">4 Wochen Mindestlaufzeit</p>
@@ -290,22 +295,27 @@
         <div class="section-header">
             <h2>Häufige <span>Fragen</span></h2>
         </div>
-        <div style="max-width: 800px; margin: 0 auto;">
-            <div class="location-card faq-card" style="margin-bottom: 20px;">
-                <h3>Wie lange ist die Vertragslaufzeit?</h3>
-                <p>Die Laufzeit hängt vom gewählten Tarif ab. Beim Flex-Tarif kannst du monatlich kündigen.</p>
+        <div class="faq-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1200px; margin: 0 auto; align-items: center;">
+            <div style="align-self: center;">
+                <div class="location-card faq-card fade-up" style="margin-bottom: 20px;">
+                    <h3>Wie lange ist die Vertragslaufzeit?</h3>
+                    <p>Die Laufzeit hängt vom gewählten Tarif ab. Beim Flex-Tarif kannst du monatlich kündigen.</p>
+                </div>
+                <div class="location-card faq-card fade-up" style="margin-bottom: 20px;">
+                    <h3>Kann ich alle Studios nutzen?</h3>
+                    <p>Ja, mit deiner Mitgliedschaft hast du Zugang zu allen 5 HappyFit Studios in Deutschland.</p>
+                </div>
+                <div class="location-card faq-card fade-up" style="margin-bottom: 20px;">
+                    <h3>Ist die Sauna inklusive?</h3>
+                    <p>Ja, Sauna und Wellness sind in deiner Mitgliedschaft enthalten - ohne Aufpreis.</p>
+                </div>
+                <div class="location-card faq-card fade-up">
+                    <h3>Gibt es eine Anmeldegebühr?</h3>
+                    <p>Kontaktiere uns für aktuelle Angebote und Informationen zu Anmeldegebühren.</p>
+                </div>
             </div>
-            <div class="location-card faq-card" style="margin-bottom: 20px;">
-                <h3>Kann ich alle Studios nutzen?</h3>
-                <p>Ja, mit deiner Mitgliedschaft hast du Zugang zu allen 5 HappyFit Studios in Deutschland.</p>
-            </div>
-            <div class="location-card faq-card" style="margin-bottom: 20px;">
-                <h3>Ist die Sauna inklusive?</h3>
-                <p>Ja, Sauna und Wellness sind in deiner Mitgliedschaft enthalten - ohne Aufpreis.</p>
-            </div>
-            <div class="location-card faq-card" style="margin-bottom: 20px;">
-                <h3>Gibt es eine Anmeldegebühr?</h3>
-                <p>Kontaktiere uns für aktuelle Angebote und Informationen zu Anmeldegebühren.</p>
+            <div class="faq-image" style="overflow: hidden; align-self: center; aspect-ratio: 3.7/4; margin: 0 auto;">
+                <img src="Bilder/DSC_0072.jpg" alt="Kletterwand" class="fade-up" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
             </div>
         </div>
     </section>

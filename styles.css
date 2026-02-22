@@ -899,6 +899,11 @@ body {
         height: 45px;
     }
 
+    .navbar > .cta-button {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
     .cta-button {
         padding: 14px 24px;
         font-size: 13px;
@@ -1042,7 +1047,7 @@ body {
     }
 
     .feature-card img {
-        height: 150px;
+        height: 280px;
     }
 
     .feature-content {
@@ -1329,5 +1334,21 @@ html {
 
     .team-deutschland-grid p {
         font-size: 11px !important;
+    }
+
+    .brands-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .brands-layout .brands-image {
+        display: none;
+    }
+
+    .faq-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .faq-layout .faq-image {
+        display: none;
     }
 }

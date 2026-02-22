@@ -31,10 +31,7 @@
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        <div style="display: flex; align-items: center; gap: 15px;">
-            <span style="color: var(--gold); font-weight: 600; font-size: 14px;">DE</span>
-            <a href="preise.html" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
-        </div>
+        <a href="preise.html" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
@@ -49,28 +46,28 @@
             <button class="carousel-arrow prev" onclick="document.getElementById('ausstattungCarousel').scrollLeft -= 300"><i class="fas fa-chevron-left"></i></button>
             <div class="features-grid swipeable" id="ausstattungCarousel">
                 <div class="feature-card">
-                    <img src="" alt="Kraftbereich">
+                    <img src="Bilder/DSC_0048.jpg" alt="Kraftbereich">
                     <div class="feature-content">
                         <h3>Kraftbereich</h3>
                         <p>Top-Equipment von Matrix, Gym80 und Technogym für effektives Krafttraining. Freie Gewichte bis 60kg und moderne Kraftstationen.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <img src="" alt="Cardio Zone">
+                    <img src="Bilder/DSC_0978.jpg" alt="Cardio Zone" style="object-position: center 30%;">
                     <div class="feature-content">
                         <h3>Cardio Zone</h3>
                         <p>Modernste Cardio-Geräte mit Entertainment-Systemen. Laufbänder, Crosstrainer, Rudergeräte und Spinning-Bikes.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <img src="" alt="Functional Training" style="object-position: top;">
+                    <img src="Bilder/IMG_1438.jpg" alt="Functional Training" style="object-position: center 35%;">
                     <div class="feature-content">
                         <h3>Functional Training</h3>
                         <p>Großzügige Functional-Bereiche mit freien Gewichten, Kettlebells, Battle Ropes und modernen Trainingstools.</p>
                     </div>
                 </div>
                 <div class="feature-card">
-                    <img src="" alt="Booty Corner" style="object-position: top;">
+                    <img src="" alt="Booty Builder Corner" style="object-position: top;">
                     <div class="feature-content">
                         <h3>Booty Builder Corner</h3>
                         <p>Gezieltes Po-Training mit den modernen Booty Builder Geräten. In ausgewählten Studios.</p>
@@ -108,24 +105,29 @@
             <h2>Unsere <span>Marken</span></h2>
             <p>Wir arbeiten nur mit den besten Herstellern</p>
         </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Matrix</h3>
-                    <p>Weltführender Hersteller für Premium-Fitnessgeräte mit innovativer Technologie.</p>
+        <div class="brands-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1200px; margin: 0 auto;">
+            <div class="features-grid" style="grid-template-columns: 1fr;">
+                <div class="feature-card" style="pointer-events: none;">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <h3>Matrix</h3>
+                        <p>Weltführender Hersteller für Premium-Fitnessgeräte mit innovativer Technologie.</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="pointer-events: none;">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <h3>Gym80</h3>
+                        <p>Deutsche Qualität und Präzision für professionelles Krafttraining.</p>
+                    </div>
+                </div>
+                <div class="feature-card" style="pointer-events: none;">
+                    <div class="feature-content" style="text-align: center; padding: 40px;">
+                        <h3>Technogym</h3>
+                        <p>Italienisches Design trifft auf modernste Fitness-Technologie.</p>
+                    </div>
                 </div>
             </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Gym80</h3>
-                    <p>Deutsche Qualität und Präzision für professionelles Krafttraining.</p>
-                </div>
-            </div>
-            <div class="feature-card">
-                <div class="feature-content" style="text-align: center; padding: 40px;">
-                    <h3>Technogym</h3>
-                    <p>Italienisches Design trifft auf modernste Fitness-Technologie.</p>
-                </div>
+            <div class="brands-image" style="aspect-ratio: 11/10; overflow: hidden; align-self: center;">
+                <img src="Bilder/DSC_0089.jpg" alt="Frau an der Beinpresse" class="fade-up" style="width: 100%; height: 100%; object-fit: cover; display: block;">
             </div>
         </div>
     </section>

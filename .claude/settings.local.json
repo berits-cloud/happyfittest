@@ -3,7 +3,10 @@
     "allow": [
       "Bash(grep:*)",
       "Bash(python3 -m django:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(brew install:*)",
+      "Bash(cwebp:*)",
+      "Bash(tail:*)"
     ]
   }
 }

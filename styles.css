@@ -437,13 +437,15 @@ body {
 /* Desktop Carousel */
 .carousel-container {
     position: relative;
-    max-width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 0 60px;
 }
 
 .features-grid.swipeable {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     gap: 20px;
     padding-bottom: 15px;
@@ -1031,6 +1033,7 @@ body {
     .features-grid.swipeable {
         display: flex;
         overflow-x: auto;
+        overflow-y: hidden;
         scroll-snap-type: x mandatory;
         gap: 15px;
         padding-bottom: 15px;

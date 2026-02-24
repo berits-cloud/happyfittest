@@ -56,7 +56,7 @@
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        <a href="preise.html" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
+        <a href="https://checkout.moresports.io/1936/checkout/onlineanmeldung" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
@@ -243,13 +243,13 @@
             <h2>Einblicke ins <span>Studio</span></h2>
         </div>
         <div class="gallery-grid">
-            <img src="Bous/Bous01.webp" alt="HappyFit Bous Studio" class="gallery-img">
-            <img src="Bous/Bous02.webp" alt="HappyFit Bous Studio" class="gallery-img">
-            <img src="Bous/Bous03.webp" alt="HappyFit Bous Studio" class="gallery-img">
-            <img src="Bous/Bous04.webp" alt="HappyFit Bous Studio" class="gallery-img">
-            <img src="Bous/Bous05.webp" alt="HappyFit Bous Studio" class="gallery-img">
-            <img src="Bous/Bous06.webp" alt="HappyFit Bous Studio" class="gallery-img">
-            <img src="Bous/Bous07.webp" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_01.jpg" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_02.jpg" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_03.jpg" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_04.jpg" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_05.jpg" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_06.jpg" alt="HappyFit Bous Studio" class="gallery-img">
+            <img src="Bous/HF-DE-Studiofotos-Bous_07.jpg" alt="HappyFit Bous Studio" class="gallery-img">
         </div>
 
         <!-- Lightbox -->
@@ -291,10 +291,18 @@
             });
             lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
 
-            // Swipe
+            // Swipe (ignore pinch-to-zoom)
             var startX = 0;
-            lb.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+            var isMultiTouch = false;
+            lb.addEventListener('touchstart', function(e) {
+                isMultiTouch = e.touches.length > 1;
+                startX = e.touches[0].clientX;
+            }, {passive: true});
+            lb.addEventListener('touchmove', function(e) {
+                if (e.touches.length > 1) isMultiTouch = true;
+            }, {passive: true});
             lb.addEventListener('touchend', function(e) {
+                if (isMultiTouch) { isMultiTouch = false; return; }
                 var diff = e.changedTouches[0].clientX - startX;
                 if (diff < -50) showImage((currentIdx + 1) % imgs.length);
                 else if (diff > 50) showImage((currentIdx - 1 + imgs.length) % imgs.length);

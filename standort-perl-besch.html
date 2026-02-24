@@ -56,7 +56,7 @@
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
-        <a href="preise.html" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
+        <a href="https://checkout.moresports.io/1936/checkout/onlineanmeldung" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
     </nav>
 
@@ -271,12 +271,12 @@
             <h2>Einblicke ins <span>Studio</span></h2>
         </div>
         <div class="gallery-grid">
-            <img src="Perl/Perl01.webp" alt="HappyFit Perl-Besch Studio" class="gallery-img">
-            <img src="Perl/Perl02.webp" alt="HappyFit Perl-Besch Studio" class="gallery-img">
-            <img src="Perl/Perl03.webp" alt="HappyFit Perl-Besch Studio" class="gallery-img">
-            <img src="Perl/Perl04.webp" alt="HappyFit Perl-Besch Studio" class="gallery-img">
-            <img src="Perl/Perl05.webp" alt="HappyFit Perl-Besch Studio" class="gallery-img">
-            <img src="Perl/Perl06.webp" alt="HappyFit Perl-Besch Studio" class="gallery-img">
+            <img src="Perl/HF-DE-Studiofotos-Perl_01.jpg" alt="HappyFit Perl-Besch Studio" class="gallery-img">
+            <img src="Perl/HF-DE-Studiofotos-Perl_02.jpg" alt="HappyFit Perl-Besch Studio" class="gallery-img">
+            <img src="Perl/HF-DE-Studiofotos-Perl_03.jpg" alt="HappyFit Perl-Besch Studio" class="gallery-img">
+            <img src="Perl/HF-DE-Studiofotos-Perl_04.jpg" alt="HappyFit Perl-Besch Studio" class="gallery-img">
+            <img src="Perl/HF-DE-Studiofotos-Perl_05.jpg" alt="HappyFit Perl-Besch Studio" class="gallery-img">
+            <img src="Perl/HF-DE-Studiofotos-Perl_06.jpg" alt="HappyFit Perl-Besch Studio" class="gallery-img">
         </div>
 
         <!-- Lightbox -->
@@ -318,10 +318,18 @@
             });
             lbImg.addEventListener('click', function(e) { e.stopPropagation(); });
 
-            // Swipe
+            // Swipe (ignore pinch-to-zoom)
             var startX = 0;
-            lb.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+            var isMultiTouch = false;
+            lb.addEventListener('touchstart', function(e) {
+                isMultiTouch = e.touches.length > 1;
+                startX = e.touches[0].clientX;
+            }, {passive: true});
+            lb.addEventListener('touchmove', function(e) {
+                if (e.touches.length > 1) isMultiTouch = true;
+            }, {passive: true});
             lb.addEventListener('touchend', function(e) {
+                if (isMultiTouch) { isMultiTouch = false; return; }
                 var diff = e.changedTouches[0].clientX - startX;
                 if (diff < -50) showImage((currentIdx + 1) % imgs.length);
                 else if (diff > 50) showImage((currentIdx - 1 + imgs.length) % imgs.length);

@@ -76,6 +76,10 @@ body {
     transition: all 0.3s;
     text-decoration: none;
     font-size: 14px;
+    min-width: 220px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 .cta-button:hover {
@@ -123,6 +127,10 @@ body {
     transition: all 0.3s;
     text-decoration: none;
     font-size: 14px;
+    min-width: 220px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 .btn-outline:hover {
@@ -287,6 +295,12 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.hero-buttons .cta-button,
+.hero-buttons .btn-outline {
+    white-space: nowrap;
+    padding: 12px 30px;
 }
 
 /* Page Hero (smaller for subpages) */
@@ -916,6 +930,11 @@ body {
         font-size: 13px;
     }
 
+    .hero-buttons .cta-button,
+    .hero-buttons .btn-outline {
+        width: 60%;
+    }
+
     .nav-links {
         display: none;
         position: fixed;
@@ -1143,6 +1162,23 @@ body {
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
+}
+
+/* Disable hover transforms on touch devices for smoother scrolling */
+@media (hover: none) {
+    .pricing-card-small:hover,
+    .feature-card:hover,
+    .location-card:hover {
+        transform: none !important;
+    }
+
+    .pricing-card-small {
+        transition: none !important;
+    }
+
+    .flex-highlight {
+        animation: none !important;
+    }
 }
 
 /* Fade Up Animation */

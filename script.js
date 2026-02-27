@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '.footer-social',
         '.contact-grid',
         '.features-grid',
-        '.locations-grid'
+        '.locations-grid',
+        '.news-card'
     ];
 
     // Add fade-up class to elements

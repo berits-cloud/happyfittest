@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '.about-founders-image',
         '.about-founders-text',
         '.team-deutschland-grid > div',
-        '.footer-social',
+        '.section .footer-social',
         '.contact-grid',
         '.features-grid',
         '.locations-grid',

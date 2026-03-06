@@ -30,7 +30,8 @@
             <li><a href="preise.html">Preise</a></li>
             <li><a href="news.html">News & Aktionen</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="kontakt.html" class="active">Kontakt</a></li>
+            <li><a href="kontakt.html" class="active">Kontakt &amp; Probetraining</a></li>
+
         </ul>
         <a href="https://checkout.moresports.io/1936/checkout/onlineanmeldung" class="cta-button shimmer-badge">Jetzt anmelden<span class="badge-shimmer"></span></a>
         <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
@@ -38,58 +39,69 @@
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <h1>Kontakt <span>aufnehmen</span></h1>
+        <h1>Kontakt & <span>Probetraining</span></h1>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Probetraining Section -->
     <section class="section section-dark">
         <div class="section-header">
-            <p>Wir freuen uns auf deine Nachricht</p>
+            <p>Dein Probetraining ist kostenlos! Kontaktiere einfach das Studio, in dem du gerne dein Probetraining absolvieren möchtest, und vereinbare deinen Termin. Hinweis: Als HappyFit Mitglied hast du später Zugang zu allen 5 Studios.</p>
         </div>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <h3>HappyFit</h3>
-                <p>Dein Partner für Fitness in Deutschland. Besuche uns in einem unserer 5 Studios oder kontaktiere uns für weitere Informationen.</p>
-                <ul class="contact-details">
-                    <li>
-                        <strong>Telefon</strong>
-                        +49 (0) 6834 123 456
-                    </li>
-                    <li>
-                        <strong>E-Mail</strong>
-                        info@happyfit.eu
-                    </li>
-                    <li>
-                        <strong>Hauptsitz</strong>
-                        Saarbrücker Str. 179, 66359 Bous
-                    </li>
-                    <li>
-                        <strong>Öffnungszeiten Kundenservice</strong>
-                        Mo-Fr: 08:00 - 20:00 Uhr<br>
-                        Sa: 09:00 - 17:00 Uhr
-                    </li>
-                </ul>
+        <div class="studio-kontakt-grid">
+            <div class="studio-kontakt-card">
+                <h3>HappyFit Bous</h3>
+                <p>Saarbrücker Str. 179, 66359 Bous</p>
+                <a href="tel:+4900000000" class="studio-telefon"><i class="fas fa-phone"></i> +49 (0) 0000 000 000</a>
+                <a href="mailto:bous@happyfit.eu" class="studio-email"><i class="fas fa-envelope"></i> bous@happyfit.eu</a>
             </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="E-Mail" required>
-                <input type="tel" placeholder="Telefon (optional)">
-                <select class="contact-select">
-                    <option value="">Betreff auswählen</option>
-                    <option value="mitgliedschaft">Mitgliedschaft</option>
-                    <option value="probetraining">Probetraining</option>
-                    <option value="kurse">Kurse</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="sonstiges">Sonstiges</option>
-                </select>
-                <textarea placeholder="Deine Nachricht" required></textarea>
-                <button type="submit" class="cta-button" style="width: 100%;">Nachricht senden</button>
-            </form>
+            <div class="studio-kontakt-card">
+                <h3>HappyFit Merzig</h3>
+                <p>Zum Wiesenhof 56, 66663 Merzig</p>
+                <a href="tel:+4900000000" class="studio-telefon"><i class="fas fa-phone"></i> +49 (0) 0000 000 000</a>
+                <a href="mailto:merzig@happyfit.eu" class="studio-email"><i class="fas fa-envelope"></i> merzig@happyfit.eu</a>
+            </div>
+            <div class="studio-kontakt-card">
+                <h3>HappyFit Dillingen</h3>
+                <p>Siemensstraße 8, 66763 Dillingen/Saar</p>
+                <a href="tel:+4900000000" class="studio-telefon"><i class="fas fa-phone"></i> +49 (0) 0000 000 000</a>
+                <a href="mailto:dillingen@happyfit.eu" class="studio-email"><i class="fas fa-envelope"></i> dillingen@happyfit.eu</a>
+            </div>
+            <div class="studio-kontakt-card">
+                <h3>HappyFit Perl-Besch</h3>
+                <p>Moselaue 2, 66706 Perl</p>
+                <a href="tel:+4900000000" class="studio-telefon"><i class="fas fa-phone"></i> +49 (0) 0000 000 000</a>
+                <a href="mailto:perl@happyfit.eu" class="studio-email"><i class="fas fa-envelope"></i> perl@happyfit.eu</a>
+            </div>
+            <div class="studio-kontakt-card">
+                <h3>HappyFit Losheim am See</h3>
+                <p>Trierer Str. 31, 66679 Losheim am See</p>
+                <a href="tel:+4900000000" class="studio-telefon"><i class="fas fa-phone"></i> +49 (0) 0000 000 000</a>
+                <a href="mailto:losheim@happyfit.eu" class="studio-email"><i class="fas fa-envelope"></i> losheim@happyfit.eu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Allgemeiner Kontakt -->
+    <section class="section section-light">
+        <div class="section-header">
+            <h2>Allgemeiner <span>Kontakt</span></h2>
+        </div>
+        <div class="kontakt-cards">
+            <a href="tel:+496834123456" class="kontakt-card">
+                <i class="fas fa-phone"></i>
+                <h3>Telefon</h3>
+                <p>+49 (0) 6834 123 456</p>
+            </a>
+            <a href="mailto:info@happyfit.eu" class="kontakt-card">
+                <i class="fas fa-envelope"></i>
+                <h3>E-Mail</h3>
+                <p>info@happyfit.eu</p>
+            </a>
         </div>
     </section>
 
     <!-- Map Section -->
-    <section class="section section-light">
+    <section class="section section-dark">
         <div class="section-header">
             <h2>Unser <span>Hauptsitz</span></h2>
             <p>Besuche uns in Bous</p>
@@ -106,18 +118,6 @@
         </div>
     </section>
 
-    <!-- Social Section -->
-    <section class="section section-dark" style="text-align: center;">
-        <div class="section-header">
-            <h2>Folge <span>uns</span></h2>
-            <p>Bleib auf dem Laufenden</p>
-        </div>
-        <div class="footer-social" style="justify-content: center;">
-            
-            <a href="https://www.instagram.com/happyfit_deutschland/" target="_blank"><i class="fab fa-instagram"></i></a>
-            
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">

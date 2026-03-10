@@ -6,7 +6,11 @@
       "Bash(python3:*)",
       "Bash(brew install:*)",
       "Bash(cwebp:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(for f in ausstattung.html datenschutz.html standort-bous.html preise.html widerruf.html kontakt.html barrierefreiheit.html standort-losheim.html standort-merzig.html standort-perl-besch.html impressum.html ueber-uns.html news.html agb.html standorte.html standort-dillingen.html)",
+      "Bash(do echo \"=== $f ===\")",
+      "Read(//Users/beritandres/Desktop/HappyFit_final/happyfittest/**)",
+      "Bash(done)"
     ]
   }
 }

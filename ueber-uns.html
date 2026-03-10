@@ -28,7 +28,7 @@
             <li><a href="ausstattung.html">Ausstattung</a></li>
             <li><a href="standorte.html">Standorte</a></li>
             <li><a href="preise.html">Preise</a></li>
-            <li><a href="news.html">News & Aktionen</a></li>
+            <!-- <li><a href="news.html">News & Aktionen</a></li> -->
             <li><a href="ueber-uns.html" class="active">Über uns</a></li>
             <li><a href="kontakt.html">Kontakt &amp; Probetraining</a></li>
 
@@ -168,16 +168,144 @@
             <h2>Das sind <span>wir</span></h2>
             <p>Fitness ist Familiensache</p>
         </div>
-        <div class="about-founders-grid">
-            <div class="about-founders-image">
-                <i class="fas fa-users" style="font-size: 80px; color: var(--text-gray);"></i>
+        <div style="position: relative; max-width: 1100px; margin: 0 auto;">
+            <button onclick="slideFamilien(-1)" style="position: absolute; left: -20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; color: white; font-size: 20px; cursor: pointer; z-index: 2; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-chevron-left"></i></button>
+            <div style="overflow: hidden;">
+                <div id="familienSlider" style="display: flex; transition: transform 0.5s ease; gap: 10px;">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_01.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(0)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_02.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(1)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_03.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(2)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_04.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(3)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_05.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(4)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_06.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(5)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_07.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(6)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_08.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(7)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_09.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(8)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_10.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(9)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_11.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(10)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_12.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(11)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_13.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(12)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_14.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(13)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_15.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(14)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_16.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(15)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_17.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(16)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_18.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(17)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_19.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(18)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_20.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(19)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_21.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(20)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_22.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(21)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_23.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(22)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_24.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(23)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_25.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(24)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_26.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(25)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_27.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(26)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_28.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(27)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_29.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(28)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_30.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(29)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_31.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(30)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_32.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(31)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_33.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(32)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_34.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(33)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_35.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(34)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_36.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(35)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_37.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(36)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_38.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(37)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_39.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(38)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_40.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(39)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_41.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(40)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_42.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(41)">
+                    <img src="Bilder/Familienfotos/HF-Familienfoto_43.jpeg" alt="HappyFit Familie" class="familien-img" onclick="openFamilienLightbox(42)">
+                </div>
             </div>
-            <div class="about-founders-text">
-                <p>Hi, schön dass du da bist! Wir sind HappyFit.</p>
-                <p>Vor über 20 Jahren hat Sven HappyFit in Österreich gegründet. Unter der Leitung von Mike betreiben wir mittlerweile 5 Studios hier im Saarland.</p>
-                <p>Bei uns bist du willkommen – egal ob Anfänger oder Profi. Wir freuen uns auf dich!</p>
-            </div>
+            <button onclick="slideFamilien(1)" style="position: absolute; right: -20px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); border: none; color: white; font-size: 20px; cursor: pointer; z-index: 2; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fas fa-chevron-right"></i></button>
         </div>
+
+        <!-- Lightbox -->
+        <div id="familienLightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 9999; justify-content: center; align-items: center;">
+            <span onclick="document.getElementById('familienLightbox').style.display='none'" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; z-index: 10001;">&times;</span>
+            <button onclick="navFamilienLightbox(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 36px; cursor: pointer; z-index: 10001; padding: 15px;"><i class="fas fa-chevron-left"></i></button>
+            <img id="familienLightboxImg" src="" style="max-width: 90%; max-height: 90%; object-fit: contain;">
+            <button onclick="navFamilienLightbox(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: white; font-size: 36px; cursor: pointer; z-index: 10001; padding: 15px;"><i class="fas fa-chevron-right"></i></button>
+        </div>
+
+        <style>
+            .familien-img {
+                min-width: calc(33.333% - 7px);
+                max-width: calc(33.333% - 7px);
+                aspect-ratio: 4 / 3;
+                height: auto;
+                object-fit: cover;
+                border-radius: 0;
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+            .familien-img:hover {
+                transform: scale(1.03);
+            }
+            @media (max-width: 768px) {
+                .familien-img {
+                    min-width: 100%;
+                    max-width: 100%;
+                }
+            }
+        </style>
+
+        <script>
+        (function() {
+            var currentPos = 0;
+            var slider = document.getElementById('familienSlider');
+            var imgs = slider.querySelectorAll('.familien-img');
+            var totalSlides = imgs.length;
+            var lbIdx = 0;
+            var lb = document.getElementById('familienLightbox');
+            var lbImg = document.getElementById('familienLightboxImg');
+            function getVisibleCount() {
+                return window.innerWidth <= 768 ? 1 : 3;
+            }
+
+            function updateSlider() {
+                var visibleCount = getVisibleCount();
+                var pct = currentPos * (100 / visibleCount);
+                slider.style.transform = 'translateX(calc(-' + pct + '% - ' + (currentPos * 10 / visibleCount) + 'px))';
+            }
+
+            window.slideFamilien = function(dir) {
+                currentPos = (currentPos + dir + totalSlides) % totalSlides;
+                updateSlider();
+            };
+
+            window.openFamilienLightbox = function(idx) {
+                lbIdx = idx;
+                lbImg.src = imgs[idx].src;
+                lb.style.display = 'flex';
+            };
+
+            window.navFamilienLightbox = function(dir) {
+                lbIdx = (lbIdx + dir + totalSlides) % totalSlides;
+                lbImg.src = imgs[lbIdx].src;
+            };
+
+            lb.addEventListener('click', function(e) {
+                if (e.target === lb) lb.style.display = 'none';
+            });
+            document.addEventListener('keydown', function(e) {
+                if (lb.style.display !== 'flex') return;
+                if (e.key === 'ArrowRight') navFamilienLightbox(1);
+                else if (e.key === 'ArrowLeft') navFamilienLightbox(-1);
+                else if (e.key === 'Escape') lb.style.display = 'none';
+            });
+
+            // Swipe
+            var startX = 0;
+            slider.parentElement.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+            slider.parentElement.addEventListener('touchend', function(e) {
+                var diff = e.changedTouches[0].clientX - startX;
+                if (diff < -50) slideFamilien(1);
+                else if (diff > 50) slideFamilien(-1);
+            });
+
+        })();
+        </script>
     </section>
 
     <!-- Team Deutschland Section -->
